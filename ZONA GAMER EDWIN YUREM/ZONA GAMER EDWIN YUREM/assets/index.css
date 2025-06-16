@@ -1,0 +1,506 @@
+
+/* 
+   1.- Navbar
+   2.- Section Home
+   3.- Acerca de
+   4.- Productos
+   5.- Contacto
+   6.- Dropdown
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html, body {
+   scroll-behavior: smooth;
+   width: 100%;
+   height: 100%;
+   font-family: 'Poppins', sans-serif;
+}
+
+
+/* 1.- Navbar */   
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: rgb(34, 36, 39);
+}
+
+.navbar .contenedor-imagen {
+  width: 100px;
+  height: 80px; 
+  margin-left: 60px;
+}
+
+.navbar .contenedor-imagen img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.navbar .contenedor-hipervinculos{
+   display: flex;
+   gap: 100px;
+}
+
+.navbar .contenedor-hipervinculos a{
+color: rgb(86, 84, 150);
+text-decoration: none;
+font-size: 18px;
+}
+
+.navbar .iconos {
+   display: flex;
+   gap: 30px
+}
+
+.navbar .iconos i {
+   font-size: 18px;
+}
+
+.navbar .iconos .icono-corazon {
+   color: red;
+}
+
+.navbar .iconos .icono-carrito {
+   color: white;
+}
+
+/* 2.- Section Home */
+.section-home {
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   background-color: rgb(41, 43, 47);
+}
+
+.section-home .contenedor-texto {
+   position: absolute;
+   left: 80px;
+   top: 130px;
+   width: 650px;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.section-home .contenedor-texto .titulo {
+   font-size: 80px;
+   font-weight: 500;
+   color: #fff;
+}
+
+.section-home .contenedor-texto .parrafo {
+   font-size:25px;
+   color: #fff;
+}
+
+.section-home .contenedor-boton .boton-explorar {
+   width: 150px;
+   height: 55px;
+   border-radius: 10px;
+   border: none;
+   background-color: rgb(60, 64, 69);
+   font-size: 25px;
+   color: white;
+   cursor: pointer;
+} 
+
+.section-home .contenedor-pantalla {
+   position: absolute;
+   right: 70px;
+   top: 60px;
+   width: 320px;
+   height: 250px;
+}
+
+.section-home .contenedor-pantalla .imagen {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   object-position: center;
+}
+
+.section-home .contenedor-raton {
+   position: absolute;
+   right: 60px;
+   top: 320px;
+   width: 220px;
+   height: 300px;
+}
+
+.section-home .contenedor-raton .imagen {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   object-position: center;
+}
+
+.section-home .contenedor-audifonos {
+   position: absolute;
+   right: 420px;
+   top: 60px;
+   width: 270px;
+   height: 250px;
+}
+
+.section-home .contenedor-audifonos .imagen {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   object-position: center;
+}
+
+.section-home .contenedor-teclado {
+   position: absolute;
+   top: 390px;
+   right: 350px;
+   width: 520px;
+   height: 300px;
+}
+
+.section-home .contenedor-teclado .imagen {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   object-position: center;
+}
+
+/* 3.- Section Acerca de */
+.section-acerca {
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 60px;
+   background-color: black;
+}
+
+.section-acerca .contenedor-texto {
+   width: 570px;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 70px;
+}
+
+.section-acerca .contenedor-texto .titulo {
+   font-size: 13px;
+   font-weight: 700;
+   color: #9f27e6;
+}
+
+.section-acerca .contenedor-texto .text-acerca {
+   display: block;
+   white-space: nowrap;
+   font-size: 50px;
+   font-weight: 700;
+   color: #fff;
+}
+
+.section-acerca .contenedor-texto .parrafo {
+   font-size: 14px;
+   text-align: justify;
+   line-height: 1.6;
+   color: #fff;
+}
+
+.section-acerca .contenedor-imagen {
+   width: 500px;
+   height: 500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.section-acerca .contenedor-imagen .imagen {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+   object-position: center;
+}
+
+/*4.- Productos*/
+.section-productos {
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 60px;
+   padding: 70px;
+   background-color: white;
+}
+
+.section-productos .contenedor-titulo {
+   display: flex;
+   justify-content: space-evenly;
+   gap: 350px;
+}
+
+.section-productos .contenedor-flechas {
+   display: flex;
+   gap: 20px;
+}
+
+.section-productos .contenedor-titulo .contenedor-flechas button {
+    width: clamp(2rem, 3vw, 2.5rem);
+    height: clamp(2rem, 3vw, 2.5rem);
+    border: none;
+    font-size: 18px;
+    background-color: rgb(245, 245, 245);
+}
+
+.section-productos .contenedor-titulo .contenedor-flechas button:hover {
+    background-color: #9f27e6;
+    color: #fff;
+}
+
+.section-productos .contenedor-titulo .contenedor-text label {
+   font-size: 24px;
+   font-weight: 500;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 220px;
+  height: 360px;                   
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.img-wrap {
+   margin-top: 40px;
+  width: 100%;
+  height: 240px;    
+  overflow: hidden;
+}
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  padding: 0.5rem 0;
+}
+.actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: transform .1s;
+}
+.actions button:hover {
+  transform: scale(1.1);
+}
+
+.section-todos-productos .products {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  gap: 5rem;
+  justify-content: center;
+  padding: 70px;
+}
+
+.section-todos-productos .contenedor-titulo label{
+   margin-left: 12%;
+   font-size: 24px;
+   font-weight: 500;
+}
+
+/*5.- Contacto*/
+.section-contacto {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.section-contacto::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-image: url("../assets/imagenes/7.jpeg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   filter: brightness(0.3);
+   z-index: 0;
+}
+
+.section-contacto .contenedor-titulo {
+   position: relative;
+   z-index: 1;
+   width: 200px;
+   height: auto;
+   margin-bottom: 30px;
+}
+
+.section-contacto .contenedor-titulo .titulo {
+   font-size: 40px;
+   color: #fff;
+}
+
+.section-contacto .formulario-contacto {
+   position: relative;
+   z-index: 1;
+   width: 800px;
+   height: auto;
+}
+
+.section-contacto .formulario-contacto .contenedor-input {
+   width: 100%;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 70px;
+}
+
+.section-contacto .formulario-contacto .contenedor-input .contenedor {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.section-contacto .formulario-contacto .contenedor-input .contenedor label {
+   font-size: 22px;
+   color: white;
+}
+
+.section-contacto .formulario-contacto .contenedor-input .contenedor input {
+   width: 250px;
+   height: 40px;
+   font-size: 20px;
+   border-radius: 7px;
+   border: none;
+}
+
+.section-contacto .formulario-contacto .contenedor-textArea {
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   flex-direction: column;
+   gap: 10px;
+}
+
+.section-contacto .formulario-contacto .contenedor-textArea label {
+   font-size: 22px;
+   color: white;
+}
+
+.section-contacto .formulario-contacto .contenedor-textArea textarea {
+   border-radius: 7px;
+}
+
+.section-contacto .formulario-contacto .contenedor-boton {
+   width: 100%;
+   height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 35px;
+}
+
+.section-contacto .formulario-contacto .contenedor-boton .enviar {
+   width: 150px;
+   height: 100%;
+   border-radius: 10px;
+   border: 3px solid #9f27e6;
+   background-color: white;
+   font-size: 16px;
+   cursor: pointer;
+}
+
+/*DROPDOWN*/
+.dropdown {
+  position: relative;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+.dropdown-content .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.dropdown-content .item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.dropdown-content .item .title {
+  font-size: 14px;
+}
+
+.empty-msg {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card .actions i.fa-heart.red {
+  color: red !important
+}
+.card .actions i.fa-cart-shopping.yellow {
+  color: yellow !important
+}

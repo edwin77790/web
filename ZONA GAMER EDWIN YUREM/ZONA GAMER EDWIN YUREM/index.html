@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Zona Gamer</title>
+</head>
+<body>
+   <div class="navbar">
+      <div class="contenedor-imagen">
+        <img src="assets/imagenes/logo.png"/>
+      </div>
+
+      <div class="contenedor-hipervinculos">
+        <a href="#inicio">Inicio</a> 
+        <a href="#acerca">Acerca de</a>
+        <a href="#contacto">Contacto</a>  
+      </div>
+
+      <div class="iconos">
+        <div class="dropdown" id="favoritesDropdown">
+          <i class="fas fa-heart icono-corazon"></i>
+          <div class="dropdown-content" id="favoritesContent">
+            <p class="empty-msg">No hay favoritos.</p>
+          </div>
+        </div>
+        <div class="dropdown" id="cartDropdown">
+          <i class="fas fa-shopping-cart icono-carrito"></i>
+          <div class="dropdown-content" id="cartContent">
+            <p class="empty-msg">El carrito está vacío.</p>
+          </div>
+        </div>
+      </div>
+   </div>
+
+   <section class="section-home" id="inicio">
+    <div class="contenedor-texto">
+      <div>
+        <label class="titulo">PRODUCTOS</label>
+        <label class="titulo">GAMING.</label>
+      </div>
+
+      <div>
+        <label class="parrafo">Sumérgete en la experiencia de juego definitiva</label>
+        <label class="parrafo">con nuestra selección de productos de gaming.</label>
+      </div>
+
+      <div class="contenedor-boton">
+        <button class="boton-explorar" onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">Explorar</button>
+      </div>
+    </div>
+
+    <div class="contenedor-pantalla">
+      <img src="assets/imagenes/4.png"  class="imagen"/>
+    </div>
+
+    <div class="contenedor-raton">
+      <img src="assets/imagenes/3.png"  class="imagen"/>
+    </div>
+
+    <div class="contenedor-audifonos">
+      <img src="assets/imagenes/5.png"  class="imagen"/>
+    </div>
+
+    <div class="contenedor-teclado">
+      <img src="assets/imagenes/6.png"  class="imagen"/>
+    </div>
+   </section>
+
+   <section class="section-acerca" id="acerca">
+    <div class="contenedor-texto">
+      <label class="titulo">Bienvenido</label>
+      <label class="text-acerca">Acerca de Nosotros</label>
+      <label class="parrafo">
+        Zona Gamer, no solo vendemos productos gaming: impulsamos experiencias. 
+        Somos una comunidad apasionada por los videojuegos, la tecnología y el alto rendimiento, 
+        comprometida en ofrecer equipos y accesorios que potencien cada partida.
+      </label>
+      <label class="titulo">Misión:</label>
+      <label class="parrafo">
+        Brindar a gamers de todos los niveles acceso a lo mejor del mundo gaming, 
+        con atención personalizada, calidad garantizada y las últimas tendencias 
+        del mercado. Nuestro catálogo está cuidadosamente seleccionado para ofrecer.
+      </label>
+      <label class="titulo">Plusvalía:</label>
+      <label class="parrafo">
+        Es una forma de vida, una identidad, una pasión. 
+        Por eso, en Zona Gamer buscamos que cada compra no solo sea una transacción, 
+        sino una evolución en tu setup.
+      </label>
+    </div>
+
+    <div class="contenedor-imagen">
+      <img src="assets/imagenes/2.jpg" class="imagen" />
+    </div>
+   </section>
+
+   <section class="section-productos" id="productos">
+      <div class="contenedor-titulo">
+          <div class="contenedor-text">
+            <label>TOP 10 PRODUCTOS MÁS VENDIDOS</label>
+          </div>
+          <div class="contenedor-flechas">
+            <button class="flecha-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="flecha-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+      </div>
+
+      <div id="carrusel-top10" class="products">
+        <div class="card">
+          <div class="img-wrap">
+            <img src="assets/imagenes/8.png" alt="Producto 1">
+          </div>
+          <div class="actions">
+            <button aria-label="Añadir a favoritos">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button aria-label="Añadir al carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-wrap">
+            <img src="assets/imagenes/9.png" alt="Producto 2">
+          </div>
+          <div class="actions">
+            <button aria-label="Añadir a favoritos">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button aria-label="Añadir al carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-wrap">
+            <img src="assets/imagenes/10.png" alt="Producto 3">
+          </div>
+          <div class="actions">
+            <button aria-label="Añadir a favoritos">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button aria-label="Añadir al carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-wrap">
+            <img src="assets/imagenes/11.png" alt="Producto 4">
+          </div>
+          <div class="actions">
+            <button aria-label="Añadir a favoritos">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button aria-label="Añadir al carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="img-wrap">
+            <img src="assets/imagenes/12.png" alt="Producto 5">
+          </div>
+          <div class="actions">
+            <button aria-label="Añadir a favoritos">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button aria-label="Añadir al carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+   </section>
+
+    <section class="section-todos-productos">
+      <div class="contenedor-titulo">
+        <label>TODOS LOS PRODUCTOS</label>
+      </div>
+      <div class="products">
+        <div class="card" id="8">
+          <div class="img-wrap">
+            <img src="assets/imagenes/8.png" alt="Producto 8">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card" id="9">
+          <div class="img-wrap">
+            <img src="assets/imagenes/9.png" alt="Producto 9">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="10">
+          <div class="img-wrap">
+            <img src="assets/imagenes/10.png" alt="Producto 10">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="11">
+          <div class="img-wrap">
+            <img src="assets/imagenes/11.png" alt="Producto 11">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="12">
+          <div class="img-wrap">
+            <img src="assets/imagenes/12.png" alt="Producto 12">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="13">
+          <div class="img-wrap">
+            <img src="assets/imagenes/13.png" alt="Producto 13">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="14">
+          <div class="img-wrap">
+            <img src="assets/imagenes/14.png" alt="Producto 14">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="15">
+          <div class="img-wrap">
+            <img src="assets/imagenes/15.png" alt="Producto 15">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="16">
+          <div class="img-wrap">
+            <img src="assets/imagenes/16.png" alt="Producto 16">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="17">
+          <div class="img-wrap">
+            <img src="assets/imagenes/17.png" alt="Producto 17">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="18">
+          <div class="img-wrap">
+            <img src="assets/imagenes/18.png" alt="Producto 18">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="19">
+          <div class="img-wrap">
+            <img src="assets/imagenes/19.png" alt="Producto 19">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="20">
+          <div class="img-wrap">
+            <img src="assets/imagenes/20.png" alt="Producto 20">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="21">
+          <div class="img-wrap">
+            <img src="assets/imagenes/21.png" alt="Producto 21">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="card" id="22">
+          <div class="img-wrap">
+            <img src="assets/imagenes/22.png" alt="Producto 22">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+        <div class="card" id="23">
+          <div class="img-wrap">
+            <img src="assets/imagenes/23.png" alt="Producto 23">
+          </div>
+          <div class="actions">
+            <button aria-label="Favorito"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+   <section class="section-contacto" id="contacto">
+    <div class="contenedor-titulo">
+      <label class="titulo">Contacto</label>
+    </div>
+    <form action="#" method="post" class="formulario-contacto">
+
+      <div class="contenedor-input">
+
+        <div class="contenedor">
+          <label>Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="input" placeholder="Nombre">
+        </div>
+
+        <div class="contenedor">
+          <label>Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" class="input" placeholder="Apellidos">
+        </div>
+
+      </div>
+
+      <div class="contenedor-input">
+
+        <div class="contenedor">
+          <label>Correo electronico:</label>
+          <input type="text" id="email" name="email" class="input" placeholder="Email">
+        </div>
+
+        <div class="contenedor">
+          <label>Telefono:</label>
+          <input type="text" id="telefono" name="telefono" class="input" placeholder="Telefono">
+        </div>
+
+      </div>
+
+      <div class="contenedor-textArea">
+        <label>Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="15" cols="80"></textarea>
+      </div>
+
+      <div class="contenedor-boton">
+        <button class="enviar">Enviar</button>
+      </div>
+      
+    </form>
+   </section>
+
+   <script src="assets/js/carrusel-top.js"></script>
+   <script src="assets/js/dropdown.js"></script>
+  </body>
+</html>
