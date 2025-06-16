@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Zona Gamer</title>
+</head>
+<body>
+   <div class="navbar">
+    <div class="contenedor-imagen">
+      <img src="assets/imagenes/logo.png"/>
+    </div>
+    <div class="contenedor-hipervinculos">
+     <a href="#">Inicio</a> 
+     <a href="#">Acerca de</a>
+     <a href="#">Contacto</a>  
+    </div>
+   <div class="iconos">
+    <i class="fas fa-heart icono-corazon"></i>
+    <i class="fas fa-shopping-cart icono-carrito"></i>
+   </div>
+   </div>
+
+   <section class="section-home">
+    <div class="contenedor-texto">
+      <div>
+        <label class="titulo">PRODUCTOS</label>
+        <label class="titulo">GAMING.</label>
+      </div>
+      <div>
+        <label class="parrafo">Sumérgete en la experiencia de juego definitiva</label>
+        <label class="parrafo">con nuestra selección de productos de gaming.</label>
+      </div>
+      <div class="contenedor-boton">
+        <button class="boton-explorar">Explorar</button>
+      </div>
+    </div>
+    <div class="contenedor-pantalla">
+      <img src="assets/imagenes/3.png" class="imagen"/>
+    </div>
+    <div class="contenedor-raton">
+      <img src="assets/imagenes/4.png" class="imagen"/>
+    </div>
+    <div class="contenedor-audifonos">
+      <img src="assets/imagenes/5.png" class="imagen"/>
+    </div>
+    <div class="contenedor-teclado">
+      <img src="assets/imagenes/6.png" class="imagen"/>
+    </div>
+   </section>
+
+   <section class="section-acerca">
+    <div class="contenedor-texto">
+      <label class="titulo">Bienvenido</label>
+      <label class="text-acerca">Acerca de Nosotros</label>
+      <label class="parrafo">
+        Zona Gamer, no solo vendemos productos gaming: impulsamos experiencias. 
+        Somos una comunidad apasionada por los videojuegos, la tecnología y el alto rendimiento, 
+        comprometida en ofrecer equipos y accesorios que potencien cada partida.
+      </label> 
+      <label class="titulo">Mision:</label>
+      <label class="parrafo">
+        Brindar a gamers de todos los niveles acceso a lo mejor del mundo gaming, 
+        con atención personalizada, calidad garantizada y las últimas tendencias 
+        del mercado. Nuestro catálogo está cuidadosamente seleccionado para ofrecer.
+      </label> 
+      <label class="titulo">Plusvalia:</label>
+      <label class="parrafo">
+        es una forma de vida, una identidad, una pasión. Por eso, en Zona Gamer buscamos que cada 
+        compra no solo sea una transacción, sino una 
+        evolución en tu setup.
+      </label> 
+    </div>
+    <div class="contenedor-imagen">
+      <img src="assets/imagenes/2.jpg" class="imagen" />
+    </div>
+   </section>
+
+   <section class="section-contacto">
+    <div class="contenedor-titulo">
+      <label class="titulo">Contáctanos</label>
+    </div>
+    <form id="contactForm" class="formulario-contacto">
+      <div class="contenedor-input">
+        <div class="contenedor">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" class="input" placeholder="Nombre" required>
+        </div>
+        <div class="contenedor">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" class="input" placeholder="Apellidos" required>
+       </div>
+      </div>
+      <div class="contenedor-input">
+        <div class="contenedor">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="input" placeholder="tu@email.com" required>
+        </div>
+        <div class="contenedor">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" class="input" placeholder="10 dígitos sin lada" required maxlength="10" pattern="[0-9]{10}" title="Ingresa 10 números sin espacios ni guiones.">
+       </div>
+      </div>
+      <div class="contenedor-textArea">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="8" required></textarea>
+      </div>
+      <div class="contenedor-boton">
+        <button type="submit" class="enviar">Enviar</button>
+      </div>
+    </form>
+   </section>
+
+   <div id="custom-alert-overlay" class="custom-alert-overlay">
+       <div id="custom-alert-box" class="custom-alert-box">
+           <h3 id="alert-title"></h3>
+           <p id="alert-message"></p>
+           <button id="alert-button">Aceptar</button>
+       </div>
+   </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        const alertOverlay = document.getElementById('custom-alert-overlay');
+        const alertBox = document.getElementById('custom-alert-box');
+        const alertTitle = document.getElementById('alert-title');
+        const alertMessage = document.getElementById('alert-message');
+        const alertButton = document.getElementById('alert-button');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+
+            fetch('procesar_formulario.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                showAlert(data.status, data.message);
+                if (data.status === 'success') {
+                    form.reset();
+                }
+            })
+            .catch(error => {
+                showAlert('error', 'No se pudo conectar con el servidor. Inténtalo más tarde.');
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Enviar';
+            });
+        });
+
+        function showAlert(status, message) {
+            alertBox.className = 'custom-alert-box'; 
+            alertBox.classList.add(status);
+            alertTitle.textContent = status === 'success' ? '¡Éxito!' : 'Error';
+            alertMessage.textContent = message;
+            alertOverlay.classList.add('show');
+        }
+
+        alertButton.addEventListener('click', function() {
+            alertOverlay.classList.remove('show');
+            location.reload();
+        });
+    });
+</script>
+
+</body>
+</html>
